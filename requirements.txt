@@ -9,5 +9,12 @@ icetk
 cpm_kernels
 faiss-cpu
 accelerate
-gradio==3.24.1
+# gradio==3.24.1
 #detectron2@git+https://github.com/facebookresearch/detectron2.git@v0.6#egg=detectron2
+
+# ChatGLM-6B
+protobuf
+torch>=1.10
+gradio
+mdtex2html
+sentencepiece

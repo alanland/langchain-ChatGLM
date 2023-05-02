@@ -275,4 +275,4 @@ with gr.Blocks(css=block_css) as demo:
          server_port=7860,
          show_api=False,
          share=True,
-         inbrowser=False))
+         inbrowser=True))
