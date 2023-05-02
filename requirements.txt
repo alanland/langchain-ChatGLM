@@ -18,6 +18,3 @@ torch>=1.10
 gradio
 mdtex2html
 sentencepiece
-
-# Pdf
-detectron2
