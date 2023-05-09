@@ -136,6 +136,8 @@ class ChatGLM(LLM):
                 self.model = (
                     AutoModel.from_pretrained(
                         model_name_or_path,
+                        device_map="auto",
+                        low_cpu_mem_usage=True,
                         config=model_config,
                         trust_remote_code=True,
                         **kwargs)
@@ -148,6 +150,8 @@ class ChatGLM(LLM):
                 model = (
                     AutoModel.from_pretrained(
                         model_name_or_path,
+                        device_map="auto",
+                        low_cpu_mem_usage=True,
                         trust_remote_code=True,
                         config=model_config,
                         **kwargs)
@@ -161,6 +165,8 @@ class ChatGLM(LLM):
             self.model = (
                 AutoModel.from_pretrained(
                     model_name_or_path,
+                    device_map="auto",
+                    low_cpu_mem_usage=True,
                     config=model_config,
                     trust_remote_code=True,
                     **kwargs)
