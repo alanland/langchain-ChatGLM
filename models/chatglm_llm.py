@@ -134,7 +134,9 @@ class ChatGLM(LLM):
                 model_config.prefix_projection = prefix_encoder_config['prefix_projection']
             except Exception as e:
                 logger.error(f"加载PrefixEncoder config.json失败: {e}")
-        self.model = AutoModel.from_pretrained(model_name_or_path, config=model_config, trust_remote_code=True,
+        self.model = AutoModel.from_pretrained(model_name_or_path, config=model_config, device_map="auto",
+                                               low_cpu_mem_usage=True,
+                                               trust_remote_code=True,
                                                **kwargs)
         if LLM_LORA_PATH and use_lora:
             from peft import PeftModel
